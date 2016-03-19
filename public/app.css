@@ -42,3 +42,7 @@ header {
 }
 
 footer {}
+
+input {
+  outline: none;
+}

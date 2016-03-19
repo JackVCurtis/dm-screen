@@ -1,0 +1,43 @@
+<div class="monster-form">
+  <h3>Create a new monster:</h3>
+  <form>
+    <section class="name">
+      <label for="monster-name">Name: </label>
+      <input name="monster-name" type="text" ng-model="monsterForm.name">
+    </section>
+    <div class="flex-container">
+
+      <section class="attributes">
+        <h4>Attributes</h4>
+
+        <table>
+          <tr ng-repeat="attr in monsterForm.attributeList">
+            <td class="attribute-name">
+              <label for="monsterStr">{{attr.name}}: </label>
+            </td>
+            <td class="attribute-score">
+              <input name="monsterStr" type="text" ng-model="monsterForm.data.attributes[attr.key]">
+            </td>
+          </tr>
+        </table>
+
+      </section>
+
+      <section>
+        <h4>Skills</h4>
+      </section>
+
+      <section>
+        <h4>Attacks</h4>
+      </section>
+
+      <section>
+        <h4>Abilities</h4>
+      </section>
+
+  </div>
+
+  <button ng-click="monsterForm.test()">Test</button>
+
+  </form>
+</div>
