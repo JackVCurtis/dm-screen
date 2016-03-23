@@ -1,0 +1,156 @@
+<div class="monster-form">
+  <h3>Create a new monster:</h3>
+  <form>
+    <section class="name">
+      <label for="monster-name">Name: </label>
+      <input name="monster-name" type="text" ng-model="cm.data.name">
+    </section>
+
+    <section class="general">
+
+      <table>
+        <tr>
+          <td>
+            <label>Size: </label>
+            <input type="text" ng-model="cm.data.size"></input>            
+          </td>
+
+          <td>
+            <label>Type: </label>
+            <input type="text" ng-model="cm.data.type"></input>            
+          </td>
+
+          <td>
+            <label>Alignment: </label>
+            <input type="text" ng-model="cm.data.alignment"></input>            
+          </td>
+        </tr>
+      </table>
+
+    </section>
+
+    <section class="description">
+      <h4>Description: </h4>
+
+      <div class="description-field" contenteditable="true" ng-model="cm.data.description"></div>
+    </section>
+
+    <section class="base-stats">
+      <table>
+        <tr>
+           <td>
+            <label>Hit Points (Hit Dice): </label>
+            <input type="text" ng-model="cm.data.hp"></input>
+          </td>
+          
+          <td>
+            <label>Armor Class: </label>
+            <input type="text" ng-model="cm.data.ac"></input>
+          </td>         
+        </tr>
+      </table>
+    </section>
+
+    <section class="speeds">
+      <h4>Speeds: </h4>
+      
+      <table>
+        <tr>
+           <td>
+            <label>Base: </label>
+            <input type="number" ng-model="cm.data.speed.base"></input>
+          </td>
+    
+          <td>
+            <label>Burrow: </label>
+            <input type="number" ng-model="cm.data.speed.burrow"></input>
+          </td>  
+
+          <td>
+            <label>Climb: </label>
+            <input type="number" ng-model="cm.data.speed.climb"></input>
+          </td>         
+
+          <td>
+            <label>Fly: </label>
+            <input type="number" ng-model="cm.data.speed.fly"></input>
+          </td>         
+
+          <td>
+            <label>Swim: </label>
+            <input type="number" ng-model="cm.data.speed.swim"></input>
+          </td>         
+        </tr>
+      </table>
+    </section>
+
+    <section class="abilities">
+      <h4>Ability Scores</h4>
+
+      <table>
+
+        <tr>
+          <td class="ability-name">
+            <label>Strength: </label>              
+          </td>
+          <td class="ability-score">
+            <input type="number" ng-model="cm.data.abilityScores.str"></input>              
+          </td>
+
+          <td class="ability-name">
+            <label>Dexterity: </label>              
+          </td>
+          <td class="ability-score">
+            <input type="number" ng-model="cm.data.abilityScores.dex"></input>              
+          </td>
+
+          <td class="ability-name">
+            <label>Constitution: </label>              
+          </td>
+          <td class="ability-score">
+            <input type="number" ng-model="cm.data.abilityScores.con"></input>              
+          </td>
+        </tr>
+
+        <tr>
+          <td class="ability-name">
+            <label>Intelligence: </label>              
+          </td>
+          <td class="ability-score">
+            <input type="number" ng-model="cm.data.abilityScores.int"></input>              
+          </td>
+
+          <td class="ability-name">
+            <label>Wisdom: </label>              
+          </td>
+          <td class="ability-score">
+            <input type="number" ng-model="cm.data.abilityScores.wis"></input>              
+          </td>
+
+          <td class="ability-name">
+            <label>Charisma: </label>              
+          </td>
+          <td class="ability-score">
+            <input type="number" ng-model="cm.data.abilityScores.cha"></input>              
+          </td>
+        </tr>
+
+      </table>
+
+    </section>
+
+    <section>
+      <h4>Skills</h4>
+    </section>
+
+    <section>
+      <h4>Attacks</h4>
+    </section>
+
+    <section>
+      <h4>Abilities</h4>
+    </section>
+
+    <button class="btn btn-large" ng-click="cm.save()">Smithers, unleash the hounds</button>
+  </form>
+</div>

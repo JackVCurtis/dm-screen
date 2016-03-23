@@ -1,0 +1,110 @@
+.monster-form {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0px 15px;
+
+  form {
+
+    section {
+      padding: 10px;
+
+      input, .description-field {
+        border: 1px solid black;
+        box-shadow: none;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .description-field:focus {
+        border: 1px solid black ;
+        box-shadow: none;
+      }
+    }
+
+    section.name {
+      padding-left: 15px;
+
+      label {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px;
+      }
+
+      input {
+        width: 200px;
+      }
+    }
+
+    section.general {
+      table {
+        width: 90%;
+
+        td {
+          padding: 5px;
+        }
+
+        input {
+          width: 10em;
+        }        
+      }
+    }
+
+    section.description {
+      .description-field {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    section.base-stats {
+      table {
+        width: 90%;
+
+        td {
+          padding: 5px;
+        }
+
+        input {
+          width: 5em;
+        }        
+      }
+    }
+
+    section.speeds {
+      table {
+        width: 90%;
+
+        td {
+          padding: 5px;
+        }
+
+        input {
+          width: 2em;
+        }        
+      }
+
+    }
+
+    section.abilities {
+      table {
+        width: 90%;
+
+        td {
+          padding: 5px;
+        }
+        td.ability-name{
+          width: 22%;
+        }
+        td.ability-score{
+          width: 11%
+        }
+
+        input {
+          width: 2em;
+        }        
+      }
+    }
+
+  }
+}
