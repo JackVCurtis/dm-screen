@@ -1,5 +1,5 @@
 // Style
-require('./app.css');
+require('./app.scss');
 
 // Modules
 var utils = require('./modules/utils');

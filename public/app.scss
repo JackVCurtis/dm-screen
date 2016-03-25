@@ -1,3 +1,5 @@
+@import "./palette.scss";
+
 .body {
   display: flex;
   flex-direction: column;
@@ -20,7 +22,8 @@
 
 .side-nav {
   padding: 1px 0;
-  background-color: #E3E3E3;
+  background-color: white;
+  border-right: 1px solid $divider-color;
   /* 12em is the width of the columns */
   flex: 0 0 12em;
   /* put the nav on the left */
@@ -34,7 +37,7 @@
 
 header {
   padding: 1px 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $divider-color;
 }
 .header-title {
   margin: 0;
@@ -47,16 +50,46 @@ input {
   outline: none;
 }
 
+// Lists
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+ul.inline {
+  display: block;
+  
+  li {
+    display: inline-block;
+  }
+}
+
+// Buttons
 .btn {
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: none;
   font-weight: normal;
-  color: white;
-  padding: 10px;
+  outline: none;
 }
 
 .btn-large {
-  background-color: #9c27b0;
+  background-color: $primary-color;
+  color: white;
+  padding: 10px;
 }
+.btn-large:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+.btn-small {
+  background-color: $primary-color;
+  color: white;
+  padding: 5px;
+}
+
+.btn-small:hover {
+  background-color: darken($primary-color, 10%);
+}
+
 

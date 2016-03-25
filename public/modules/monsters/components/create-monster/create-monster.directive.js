@@ -6,13 +6,32 @@ function CreateMonster(MonsterResource, MonsterUtils, CreateMonsterRequest){
     scope: {},
     template: require('./create-monster.html'),
     controller: function(){
-      var monster = new CreateMonsterRequest();
+      this.errorMsgs = [];
 
+      var monster = new CreateMonsterRequest();      
       this.data = monster.getData();
+
+      this.newSkill = "";
+
+      this.addSkill = function(){
+        var skill = MonsterUtils.createSkill(this.newSkill, this.errorMsgs);
+        
+        if (skill){
+          this.data.skills.push(skill);
+          this.newSkill = "";
+        }
+      };
+
+      this.deleteSkill = function(skillId){
+        this.data.skills = MonsterUtils.deleteSkill(this.data.skills, skillId);
+      };
 
       this.save = function(){
         console.log(this.data);
       };
+
+      // Display helpers
+
     },
     controllerAs: 'cm',
     bindToController: {
