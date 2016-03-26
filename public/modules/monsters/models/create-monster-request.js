@@ -50,10 +50,12 @@ var CreateMonsterRequest = function(){
 				effect: ""
 			},
 			actions: {
+				name: "",
 				type: "attack",
 				properties: {}
 			},
 			reactions: {
+				name:  "",
 				type: "attack",
 				properties: {}
 			}

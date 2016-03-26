@@ -141,8 +141,15 @@
 
     <section class="traits" ng-repeat="traitType in cm.arrayTraits">
       <h4>{{traitType.label}}</h4>
-      
-      <form class="array-form" 
+
+      <ul class="trait-list inline">
+        <li ng-repeat="item in cm.data[traitType.id] track by $index">
+          <span class="delete-trait" ng-click="cm.deleteItem($index, cm.data[traitType.id])">X</span>
+          <span>{{item.label || item}}</span>
+        </li>        
+      </ul>
+
+      <div class="array-form" 
             ng-submit="cm.addItem(traitType.id, cm.newItems[traitType.id], cm.data[traitType.id])">
 
         <input  type="text" 
@@ -151,18 +158,22 @@
         <button class="btn btn-small" 
                 type="submit"
                 ng-click="cm.addItem(traitType.id, cm.newItems[traitType.id], cm.data[traitType.id])">Add</button>
-      </form>
-
-      <ul class="trait-list inline">
-        <li ng-repeat="item in cm.data[traitType.id] track by $index">
-          <span class="delete-trait" ng-click="cm.deleteItem($index, cm.data[traitType.id])">X</span>
-          <span>{{item.label || item}}</span>
-        </li>        
-      </ul>
+      </div>
     </section>
 
     <section class="actions">
+      <h4>Actions</h4>
+
+      <div class="action-field">
+        <label>Name: </label>
+        <input type="text" ng-model="cm.newItems.actions.name">  
+        <button class="btn btn-small">Add Action</button>      
+      </div>
       
+      <div class="action-field">
+        <label>Description: </label>
+        <div class="description-field" contenteditable="true" ng-model="cm.newItems.actions.properties.description"></div>
+      </div>
     </section>
 
     <div class="change-monster-submit">
