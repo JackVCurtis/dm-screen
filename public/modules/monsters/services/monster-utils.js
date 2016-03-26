@@ -1,5 +1,44 @@
 module.exports = function MonsterUtils(StatusEnumerable){
 
+	this.getEnumerables = function (){
+		var enumerableTraits = [
+			{
+				id: "skills",
+				label: "Skills",
+				list: this.getSkills
+			},
+			{
+				id: "resistances",
+				label: "Resistances",
+				list: null
+			},			
+			{
+				id: "immunities",
+				label: "Immunities",
+				list: null
+			},
+			{
+				id: "senses",
+				label: "Senses",
+				list: null
+			},
+			{
+				id: "languages",
+				label: "Languages",
+				list: null
+			}
+		];
+
+		return enumerableTraits;
+	}
+	this.getEnumerable = function(enumId){
+		var enumerableTraits = this.getEnumerables();
+
+		return enumerableTraits.filter(function(enumerable){ 
+			return enumerable.id == enumId; 
+		})[0];
+	}
+
 	this.getAbilities = function(){
 		return [
 	        {
@@ -26,7 +65,7 @@ module.exports = function MonsterUtils(StatusEnumerable){
 	          name: 'Charisma',
 	          key: 'cha'
 	        }
-      	];
+	  	];
 	};
 
 	this.getSkills = function(){
@@ -44,22 +83,22 @@ module.exports = function MonsterUtils(StatusEnumerable){
 		];
 	};
 
-	this.addSkill = function (skillId, monsterData) {		
-		var newSkill = this.getSkills().filter(function (skill){
-			return skill.id == skillId.toLowerCase();
+	this.addItem = function (enumId, itemId, dataArray) {	
+		var item = this.getEnumerable(enumId).list().filter(function (item){
+			return item.id == itemId.toLowerCase();
 		})[0];
 
-		if (newSkill) {
-			monsterData.skills.push(newSkill);
+		if (item) {
+			dataArray.push(item);
 			return StatusEnumerable.OK();
 		}
 		else {
-			return StatusEnumerable.InputError("Skill not found");
+			return StatusEnumerable.InputError(itemId + " is not a legal value");
 		}
 	};
 
-	this.deleteSkill = function (skillIndex, monsterData) {
-		monsterData.skills.splice(skillIndex, 1);
+	this.deleteItem = function (index, dataArray) {
+		dataArray.splice(index, 1);
 	};
 
 };

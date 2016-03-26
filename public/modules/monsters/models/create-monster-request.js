@@ -37,11 +37,6 @@ var CreateMonsterRequest = function(){
 		};
 	};
 
-	this.getErrorTypes = function(){
-		return {
-			skills: null
-		};
-	}
 };
 
 var CreateMonsterFactory = function(){

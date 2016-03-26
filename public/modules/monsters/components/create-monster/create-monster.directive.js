@@ -9,10 +9,11 @@ function CreateMonster(MonsterResource, MonsterUtils, CreateMonsterRequest){
       var cm = this;
       var monster = new CreateMonsterRequest();
       this.data = monster.getData();        
+      this.enumerableTraits = MonsterUtils.getEnumerables;
 
       this.refreshState = {
         errors: function() {
-          cm.errors = monster.getErrorTypes();
+          cm.errors = [];
         },
         inputs: function() {
           cm.newSkill = "";
@@ -26,15 +27,15 @@ function CreateMonster(MonsterResource, MonsterUtils, CreateMonsterRequest){
       };
       this.refreshAll();
 
-      this.addSkill = function(){
-        var status = MonsterUtils.addSkill(this.newSkill, this.data);
+      this.addItem = function(enumId, newItem, dataArray){
+        var status = MonsterUtils.addItem(enumId, newItem, dataArray);
 
         if (status.type == "OK"){ this.refreshState.errors(); this.refreshState.inputs(); }
-        else { this.errors.skills = status; }
+        else { this.errors[enumId] = status; }
       };
 
-      this.deleteSkill = function (skillIndex) {
-        MonsterUtils.deleteSkill(skillIndex, this.data);
+      this.deleteItem = function (skillIndex,dataArray) {
+        MonsterUtils.deleteItem(skillIndex, dataArray);
       };
 
       this.save = function(){
