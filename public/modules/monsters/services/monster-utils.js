@@ -8,6 +8,11 @@ module.exports = function MonsterUtils(StatusEnumerable){
 				list: this.getSkills
 			},
 			{
+				id: "vulnerabilities",
+				label: "Vulnerabilities",
+				list: null
+			},			
+			{
 				id: "resistances",
 				label: "Resistances",
 				list: null
@@ -84,9 +89,17 @@ module.exports = function MonsterUtils(StatusEnumerable){
 	};
 
 	this.addItem = function (enumId, itemId, dataArray) {	
-		var item = this.getEnumerable(enumId).list().filter(function (item){
-			return item.id == itemId.toLowerCase();
-		})[0];
+		var item;
+		var enumType = this.getEnumerable(enumId)
+
+		if (enumType.list) {
+			item = enumType.list().filter(function (item){
+				return item.id == itemId.toLowerCase();
+			})[0];
+		} 
+		else {
+			item = itemId;
+		}
 
 		if (item) {
 			dataArray.push(item);

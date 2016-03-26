@@ -109,8 +109,8 @@
       }
     }
 
-    section.skills {
-      ul.skill-list {
+    section.traits {
+      ul.trait-list {
         margin: 5px 0;
         
         li {
@@ -119,7 +119,7 @@
           padding: 10px;
           margin: 5px;
 
-          .delete-skill {
+          .delete-trait {
             color: $secondary-text-color;
             cursor: pointer;
           }

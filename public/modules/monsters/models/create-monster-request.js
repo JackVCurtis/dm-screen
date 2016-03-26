@@ -37,6 +37,28 @@ var CreateMonsterRequest = function(){
 		};
 	};
 
+	this.getInitialVals = function(){
+		return {
+			skills: "",
+			vulnerabilities: "",
+			resistances: "",
+			immunities: "",
+			senses: "",
+			languages: "",
+			specialTraits: {
+				name: "",
+				effect: ""
+			},
+			actions: {
+				type: "attack",
+				properties: {}
+			},
+			reactions: {
+				type: "attack",
+				properties: {}
+			}
+		}
+	};
 };
 
 var CreateMonsterFactory = function(){

@@ -9,14 +9,14 @@ function CreateMonster(MonsterResource, MonsterUtils, CreateMonsterRequest){
       var cm = this;
       var monster = new CreateMonsterRequest();
       this.data = monster.getData();        
-      this.enumerableTraits = MonsterUtils.getEnumerables;
+      this.arrayTraits = MonsterUtils.getEnumerables();
 
       this.refreshState = {
         errors: function() {
           cm.errors = [];
         },
         inputs: function() {
-          cm.newSkill = "";
+          cm.newItems = monster.getInitialVals();
         }
       };
 
@@ -32,6 +32,12 @@ function CreateMonster(MonsterResource, MonsterUtils, CreateMonsterRequest){
 
         if (status.type == "OK"){ this.refreshState.errors(); this.refreshState.inputs(); }
         else { this.errors[enumId] = status; }
+      };
+
+      this.addItemOnEnter = function($event, enumId, newItem, dataArray){
+        if ($event.charCode == 13){
+          this.addItem(enumId, newItem, dataArray);
+        }
       };
 
       this.deleteItem = function (skillIndex,dataArray) {

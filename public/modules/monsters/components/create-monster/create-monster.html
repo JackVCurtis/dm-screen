@@ -139,33 +139,30 @@
 
     </section>
 
-    <section class="skills">
-      <h4>Skills</h4>
+    <section class="traits" ng-repeat="traitType in cm.arrayTraits">
+      <h4>{{traitType.label}}</h4>
       
-      <div class="error-message" ng-if="cm.errors.skills">
-        <span>{{cm.errors.skills.message}}</span>
-        <span class="clear-error" ng-click="cm.refreshState.errors()">X</span>
-      </div>
+      <form class="array-form" 
+            ng-submit="cm.addItem(traitType.id, cm.newItems[traitType.id], cm.data[traitType.id])">
 
-      <div class="array-form">
-        <input type="text" ng-model="cm.newSkill"></input>
-        <button class="btn btn-small" ng-click="cm.addItem('skills', cm.newSkill, cm.data.skills)">Add</button>
-      </div>
+        <input  type="text" 
+                ng-model="cm.newItems[traitType.id]"
+                ng-keypress="cm.addItemOnEnter($event, traitType.id, cm.newItems[traitType.id], cm.data[traitType.id])"></input>
+        <button class="btn btn-small" 
+                type="submit"
+                ng-click="cm.addItem(traitType.id, cm.newItems[traitType.id], cm.data[traitType.id])">Add</button>
+      </form>
 
-      <ul class="skill-list inline">
-        <li ng-repeat="item in cm.data.skills track by $index">
-          <span class="delete-skill" ng-click="cm.deleteItem($index, cm.data.skills)">X</span>
+      <ul class="trait-list inline">
+        <li ng-repeat="item in cm.data[traitType.id] track by $index">
+          <span class="delete-trait" ng-click="cm.deleteItem($index, cm.data[traitType.id])">X</span>
           <span>{{item.label || item}}</span>
         </li>        
       </ul>
     </section>
 
-    <section>
-      <h4>Attacks</h4>
-    </section>
-
-    <section>
-      <h4>Abilities</h4>
+    <section class="actions">
+      
     </section>
 
     <div class="change-monster-submit">
