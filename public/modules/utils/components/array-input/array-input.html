@@ -1,0 +1,17 @@
+<ul class="item-list inline">
+  <li ng-repeat="error in ai.errorMsgs">
+    <span class="error">{{err.message}}</span>
+  </li>        
+</ul>
+
+<div class="array-form">
+  <input type="text" ng-model="ai.newItem"></input>
+  <button class="btn btn-small" ng-click="ai.submit()">Add</button>
+</div>
+
+<ul class="item-list inline">
+  <li ng-repeat="item in ai.dataArray track by $index">
+    <span class="delete-item" ng-click="ai.delete($index)">X</span>
+    <span>{{item.label || item}}</span>
+  </li>        
+</ul>

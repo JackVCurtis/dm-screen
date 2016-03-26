@@ -6,31 +6,40 @@ function CreateMonster(MonsterResource, MonsterUtils, CreateMonsterRequest){
     scope: {},
     template: require('./create-monster.html'),
     controller: function(){
-      this.errorMsgs = [];
+      var cm = this;
+      var monster = new CreateMonsterRequest();
+      this.data = monster.getData();        
 
-      var monster = new CreateMonsterRequest();      
-      this.data = monster.getData();
-
-      this.newSkill = "";
-
-      this.addSkill = function(){
-        var skill = MonsterUtils.createSkill(this.newSkill, this.errorMsgs);
-        
-        if (skill){
-          this.data.skills.push(skill);
-          this.newSkill = "";
+      this.refreshState = {
+        errors: function() {
+          cm.errors = monster.getErrorTypes();
+        },
+        inputs: function() {
+          cm.newSkill = "";
         }
       };
 
-      this.deleteSkill = function(skillId){
-        this.data.skills = MonsterUtils.deleteSkill(this.data.skills, skillId);
+      this.refreshAll = function(){
+        for (var key in cm.refreshState){
+          cm.refreshState[key]();
+        }
+      };
+      this.refreshAll();
+
+      this.addSkill = function(){
+        var status = MonsterUtils.addSkill(this.newSkill, this.data);
+
+        if (status.type == "OK"){ this.refreshState.errors(); this.refreshState.inputs(); }
+        else { this.errors.skills = status; }
+      };
+
+      this.deleteSkill = function (skillIndex) {
+        MonsterUtils.deleteSkill(skillIndex, this.data);
       };
 
       this.save = function(){
         console.log(this.data);
       };
-
-      // Display helpers
 
     },
     controllerAs: 'cm',

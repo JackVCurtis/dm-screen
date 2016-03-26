@@ -1,4 +1,4 @@
-module.exports = function MonsterUtils(){
+module.exports = function MonsterUtils(StatusEnumerable){
 
 	this.getAbilities = function(){
 		return [
@@ -29,39 +29,37 @@ module.exports = function MonsterUtils(){
       	];
 	};
 
-	this.skillData = function(){
+	this.getSkills = function(){
 		return [
 			{
 				id: 'climb',
-				name: 'Climb',
+				label: 'Climb',
 				abilityId: 'str'
 			},
 			{
 				id: 'perception',
-				name: 'Perception',
+				label: 'Perception',
 				abilityId: 'wis'
 			}
 		];
 	};
 
-	this.createSkill = function(skillName, errorMsgs){
-		var newSkill = this.skillData().filter(function (skill){
-			return skill.id == skillName.toLowerCase();
+	this.addSkill = function (skillId, monsterData) {		
+		var newSkill = this.getSkills().filter(function (skill){
+			return skill.id == skillId.toLowerCase();
 		})[0];
 
-		if(newSkill){
-			return newSkill;
+		if (newSkill) {
+			monsterData.skills.push(newSkill);
+			return StatusEnumerable.OK();
 		}
 		else {
-			errorMsgs.push(new Error("Invalid skill name"));
-			return false;
+			return StatusEnumerable.InputError("Skill not found");
 		}
 	};
 
-	this.deleteSkill = function(skillList, skillId){
-		return skillList.filter(function(skill){
-			return skill.id != skillId;
-		});
-	}
+	this.deleteSkill = function (skillIndex, monsterData) {
+		monsterData.skills.splice(skillIndex, 1);
+	};
 
 };

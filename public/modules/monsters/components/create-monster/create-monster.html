@@ -141,18 +141,23 @@
 
     <section class="skills">
       <h4>Skills</h4>
-        <div class="new-skill-form">
-          <input type="text" ng-model="cm.newSkill"></input>
-          <button class="btn btn-small" ng-click="cm.addSkill()">Add</button>
-        </div>
+      
+      <div class="error-message" ng-if="cm.errors.skills">
+        <span>{{cm.errors.skills.message}}</span>
+        <span class="clear-error" ng-click="cm.refreshState.errors()">X</span>
+      </div>
 
-        <ul class="skill-list inline">
-          <li ng-repeat="skill in cm.data.skills">
-            <span class="delete-skill" ng-click="cm.deleteSkill(skill.id)">X</span>
-            <span>{{skill.name}}</span>
-          </li>        
-        </ul>
+      <div class="array-form">
+        <input type="text" ng-model="cm.newSkill"></input>
+        <button class="btn btn-small" ng-click="cm.addSkill()">Add</button>
+      </div>
 
+      <ul class="skill-list inline">
+        <li ng-repeat="item in cm.data.skills track by $index">
+          <span class="delete-skill" ng-click="cm.deleteSkill($index)">X</span>
+          <span>{{item.label || item}}</span>
+        </li>        
+      </ul>
     </section>
 
     <section>
