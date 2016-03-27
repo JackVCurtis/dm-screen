@@ -22,7 +22,7 @@ var MonsterSchema = new Schema({
 	languages: [String],
 	properties: [Schema.Types.Mixed],
 	actions: [Schema.Types.Mixed],
-	reactions: [Schema.Types.Mixed
+	reactions: [Schema.Types.Mixed]
 });
 
 module.exports = mongoose.model('Monster', MonsterSchema);
