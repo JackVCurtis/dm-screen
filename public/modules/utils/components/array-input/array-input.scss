@@ -1,0 +1,17 @@
+@import "../../../../palette.scss";
+
+ul.item-list {
+  margin: 5px 0;
+  
+  li {
+    border: 1px solid $divider-color;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+
+    .delete-item {
+      color: $secondary-text-color;
+      cursor: pointer;
+    }
+  }
+}

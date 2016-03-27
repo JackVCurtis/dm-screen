@@ -1,0 +1,128 @@
+@import "./palette.scss";
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.content-container {
+  flex: 1;
+  flex-direction: row;
+}
+
+.content {
+  padding: 0 100px;
+}
+
+.side-nav {
+  padding: 1px 0;
+  background-color: white;
+  border-right: 1px solid $divider-color;
+  /* 12em is the width of the columns */
+  flex: 0 0 12em;
+  /* put the nav on the left */
+  order: -1;
+}
+
+.side-nav-title {
+  margin: 0;
+  padding: 18px;
+}
+
+header {
+  padding: 1px 10px;
+  border-bottom: 1px solid $divider-color;
+}
+.header-title {
+  margin: 0;
+  padding: 18px;
+}
+
+footer {}
+
+input {
+  outline: none;
+}
+
+// Lists
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+ul.inline {
+  display: block;
+  
+  li {
+    display: inline-block;
+  }
+}
+
+// Buttons
+.btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: none;
+  font-weight: normal;
+  outline: none;
+}
+
+.btn-large {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px;
+}
+.btn-large:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+.btn-small {
+  background-color: $primary-color;
+  color: white;
+  padding: 5px;
+}
+
+.btn-small:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+// Errors
+.error-message {
+  color: red;
+  display: block;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+// Forms
+.inline-form {
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.inline-form-group {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  label {
+    width: 60%;
+  }
+  input {
+    width: 40%;
+  }
+}

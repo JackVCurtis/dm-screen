@@ -1,0 +1,62 @@
+@import "../../../../palette.scss";
+
+.monster-form {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid $divider-color;
+  border-radius: 5px;
+  padding: 0px 15px;
+
+  form {
+
+    section {
+      padding: 10px;
+
+      input, .description-field {
+        border: 1px solid black;
+        box-shadow: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      .description-field:focus {
+        border: 1px solid black ;
+        box-shadow: none;
+      }
+    }
+
+    section.name {
+      padding-left: 15px;
+
+      label {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px;
+      }
+
+      input {
+        width: 200px;
+      }
+    }
+
+    section.general {
+
+    }
+
+    section.description {
+      .description-field {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    .change-monster-submit {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+  }
+}
