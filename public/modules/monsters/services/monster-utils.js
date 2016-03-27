@@ -35,14 +35,15 @@ module.exports = function MonsterUtils(StatusEnumerable){
 		];
 
 		return enumerableTraits;
-	}
+	};
+
 	this.getEnumerable = function(enumId){
 		var enumerableTraits = this.getEnumerables();
 
 		return enumerableTraits.filter(function(enumerable){ 
 			return enumerable.id == enumId; 
 		})[0];
-	}
+	};
 
 	this.getAbilities = function(){
 		return [
@@ -90,7 +91,7 @@ module.exports = function MonsterUtils(StatusEnumerable){
 
 	this.addItem = function (enumId, itemId, dataArray) {	
 		var item;
-		var enumType = this.getEnumerable(enumId)
+		var enumType = this.getEnumerable(enumId);
 
 		if (enumType.list) {
 			item = enumType.list().filter(function (item){
