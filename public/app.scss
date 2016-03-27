@@ -103,3 +103,26 @@ ul.inline {
   margin-bottom: 10px;
 }
 
+// Forms
+.inline-form {
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.inline-form-group {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  label {
+    width: 60%;
+  }
+  input {
+    width: 40%;
+  }
+}

@@ -6,7 +6,7 @@ var MonsterUtils = require('./services/monster-utils.js');
 var CreateMonsterRequest = require('./models/create-monster-request.js');
 
 //Components
-var CreateMonster = require('./components/create-monster/create-monster.directive.js');
+var MonsterForm = require('./components/create-monster/monster-form.directive.js');
 
 angular.module('monsters', ['utils']);
 
@@ -14,5 +14,5 @@ module.exports = angular.module('monsters')
 					.service('MonsterResource', MonsterResource)
 					.service('MonsterUtils', MonsterUtils)
 					.factory('CreateMonsterRequest', CreateMonsterRequest)
-					.directive('createMonster', CreateMonster)
+					.directive('monsterForm', MonsterForm)
 					.name;

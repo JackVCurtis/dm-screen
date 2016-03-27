@@ -24,43 +24,10 @@ var CreateMonsterRequest = function(){
 	          	int: 10,
 	          	wis: 10,
 	          	cha: 10
-			},
-			skills: [],
-			vulnerabilities: [],
-			resistances: [],
-			immunities: [],
-			senses: [],
-			languages: [],
-			specialTraits: [],
-			actions: [],
-			reactions: []
+			}
 		};
 	};
 
-	this.getInitialVals = function(){
-		return {
-			skills: "",
-			vulnerabilities: "",
-			resistances: "",
-			immunities: "",
-			senses: "",
-			languages: "",
-			specialTraits: {
-				name: "",
-				effect: ""
-			},
-			actions: {
-				name: "",
-				type: "attack",
-				properties: {}
-			},
-			reactions: {
-				name:  "",
-				type: "attack",
-				properties: {}
-			}
-		}
-	};
 };
 
 var CreateMonsterFactory = function(){
