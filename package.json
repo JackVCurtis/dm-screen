@@ -6,7 +6,7 @@
   "scripts": {
     "app": "webpack-dev-server --inline --hot",
     "server": "node server/",
-    "dev": "npm run app && npm run server",
+    "dev": "npm run app && npm run server"
   },
   "author": "",
   "license": "ISC",
