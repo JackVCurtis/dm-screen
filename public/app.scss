@@ -17,6 +17,7 @@
 }
 
 .content {
+  min-height: 80vh;
   padding: 0 100px;
 }
 
@@ -44,7 +45,9 @@ header {
   padding: 18px;
 }
 
-footer {}
+footer {
+  border-top: 1px solid $divider-color;
+}
 
 input {
   outline: none;
