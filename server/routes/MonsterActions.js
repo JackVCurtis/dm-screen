@@ -7,7 +7,7 @@ var normalizedPath = path.join(__dirname, "MonsterActions");
 
 fs.readdirSync(normalizedPath).forEach(function(file) {
     var route = require("./MonsterActions/" + file);
-    router.use('/monsters/actions', route);
+    router.use('/monsters', route);
 });
 
 module.exports = router;

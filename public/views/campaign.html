@@ -1,0 +1,6 @@
+<h3>Find or Create a Campaign: </h3>
+<input class="search" type="text" ng-keyup="handleSearch($event)" ng-model="campaignSearch"></input>
+
+<ul>
+	<li ng-repeat="campaign in displayedCampaigns">{{campaign}}</li>
+</ul>
