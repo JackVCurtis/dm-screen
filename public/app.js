@@ -11,7 +11,7 @@ var campaigns = require('./modules/campaigns');
 
 // Controllers
 var RootCtrl = require('./controllers/root.js');
-var MonsterCtrl = require('./controllers/root.js');
+var MonsterCtrl = require('./controllers/monster.js');
 var CampaignCtrl = require('./controllers/campaign.js');
 
 // Config

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "app": "webpack-dev-server --inline --hot",
-    "server": "node server/",
+    "server": "nodemon server/",
     "dev": "npm run app && npm run server"
   },
   "author": "",
@@ -28,5 +28,8 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.1"
   }
 }

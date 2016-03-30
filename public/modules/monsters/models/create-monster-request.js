@@ -1,7 +1,9 @@
 var CreateMonsterRequest = function(){
 
-	this.getData = function(){
-		return {
+	this.data = {};
+
+	this.refreshData = function(){
+		this.data = {
 			name: "",
 			description: "",
 			size: "",
@@ -27,6 +29,12 @@ var CreateMonsterRequest = function(){
 			}
 		};
 	};
+
+	this.getData = function () {
+		return this.data;
+	};
+
+	this.refreshData();
 
 };
 

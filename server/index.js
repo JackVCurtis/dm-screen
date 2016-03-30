@@ -48,14 +48,7 @@ app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
-// Load each route from the routes directory and bind to /api
-var normalizedPath = path.join(__dirname, "routes");
-
-fs.readdirSync(normalizedPath).forEach(function(file) {
-    var route = require("./routes/" + file);
-    app.use('/api', route);
-});
+app.use('/api', require('./routes/MonsterActions.js'));
 
 app.get('*', function(req, res, next) {
     if (req.url.indexOf('build') > -1) return next();
