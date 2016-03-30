@@ -9,9 +9,10 @@ var CreateMonsterRequest = function(){
 			size: "",
 			type: "",
 			alignment: "",
-			challengeRating: 1,
+			cr: 1,
 			ac: 15,
-			hp: "5 (1d8)",
+			hitDice: "1d8",
+			hitPoints: 5,
 			speed: {
 				base: 30,
 				burrow: 0,
