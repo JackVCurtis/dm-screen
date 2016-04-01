@@ -11,7 +11,6 @@ var campaigns = require('./modules/campaigns');
 
 // Controllers
 var RootCtrl = require('./controllers/root.js');
-var MonsterCtrl = require('./controllers/monster.js');
 var CampaignCtrl = require('./controllers/campaign.js');
 
 // Config
@@ -21,6 +20,4 @@ angular.module('app', ['ui.router', monsters, utils]);
 
 angular.module('app')
   .controller('RootCtrl', RootCtrl)
-  .controller('MonsterCtrl', MonsterCtrl)
-  .controller('CampaignCtrl', CampaignCtrl)
   .config(RouteConfig);

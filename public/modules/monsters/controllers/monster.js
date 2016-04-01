@@ -1,4 +1,7 @@
-var MonsterCtrl = function($scope, $http, CreateMonsterRequest){
+var CreateMonsterRequest = require('../models/create-monster-request');
+
+var MonsterCtrl = function($scope, $rootScope, $http){
+	$rootScope.title = "Monsters"
 
 	var newMonster = $scope.newMonster = new CreateMonsterRequest();
   	$scope.createMonsterData = newMonster.getData();
@@ -10,6 +13,6 @@ var MonsterCtrl = function($scope, $http, CreateMonsterRequest){
   	};      
 };
 
-MonsterCtrl.$inject = ['$scope', '$http', 'CreateMonsterRequest'];
+MonsterCtrl.$inject = ['$scope', '$http'];
 
 module.exports = MonsterCtrl;

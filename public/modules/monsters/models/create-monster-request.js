@@ -39,8 +39,4 @@ var CreateMonsterRequest = function(){
 
 };
 
-var CreateMonsterFactory = function(){
-	return CreateMonsterRequest;
-};
-
-module.exports = CreateMonsterFactory;
+module.exports = CreateMonsterRequest;
