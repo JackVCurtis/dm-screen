@@ -1,0 +1,10 @@
+.subnav {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+
+	.tab {
+		flex: 1;
+		max-width: 12%;
+	}
+}

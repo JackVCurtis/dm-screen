@@ -8,7 +8,7 @@ var MonsterUtils = require('./services/monster-utils.js');
 var MonsterForm = require('./components/create-monster/monster-form.directive.js');
 
 // Controllers
-var MonsterController = require('./controllers/monster.js')
+var MonsterController = require('./controllers/monster.js');
 
 angular.module('monsters', ['utils']);
 

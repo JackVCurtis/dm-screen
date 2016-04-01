@@ -7,7 +7,7 @@ var RouteConfig = function($stateProvider, $urlRouterProvider, $locationProvider
       	url: "/app/",
       	template: require('../views/root.html'),
       	controller: 'RootCtrl'
-    })
+    });
 };
 
 RouteConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
