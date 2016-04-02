@@ -1,3 +1,59 @@
 <div class="monster-summary-card">
-	<h3>Monster summary for {{msCtrl.monster.name}}</h3>
+	<h4>{{msCtrl.monster.name}}</h4>
+	<p>{{msCtrl.monster.description}}</p>
+
+	<section class="base-stats">
+		<div class="stat">
+			<strong>Challenge Rating: </strong>
+			<span>{{msCtrl.monster.cr}}</span>
+		</div>
+		<div class="stat">
+			<strong>Armor Class: </strong>
+			<span>{{msCtrl.monster.ac}}</span>
+		</div>
+		<div class="stat">
+			<strong>Hit Points: </strong>
+			<span>{{msCtrl.monster.hitPoints}}</span>
+		</div>
+		<div class="stat">
+			<strong>Speed: </strong>
+			<span>{{msCtrl.monster.baseSpeed}}</span>
+		</div>
+	</section>
+
+	<section class="ability-scores">
+		<div class="ability-score">
+			<strong>Str</strong>
+			<span>{{msCtrl.monster.abilityScores.str}}</span>
+		</div>
+		<div class="ability-score">
+			<strong>Dex</strong>
+			<span>{{msCtrl.monster.abilityScores.dex}}</span>
+		</div>
+		<div class="ability-score">
+			<strong>Con</strong>
+			<span>{{msCtrl.monster.abilityScores.con}}</span>
+		</div>
+		<div class="ability-score">
+			<strong>Int</strong>
+			<span>{{msCtrl.monster.abilityScores.int}}</span>
+		</div>
+		<div class="ability-score">
+			<strong>Wis</strong>
+			<span>{{msCtrl.monster.abilityScores.wis}}</span>
+		</div>
+		<div class="ability-score">
+			<strong>Cha</strong>
+			<span>{{msCtrl.monster.abilityScores.cha}}</span>
+		</div>
+	</section>
+
+	<section class="other-stats">
+	</section>
+
+	<section class="abilities">
+	</section>
+
+	<section class="actions">
+	</section>
 </div>

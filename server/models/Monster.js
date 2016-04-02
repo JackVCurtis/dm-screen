@@ -13,7 +13,7 @@ var MonsterSchema = new Schema({
 	cr: {type: Schema.Types.Mixed, required: true}, //Uses strings to work with fractional CRs
 	baseSpeed: {type: Number, required: true},
 	altSpeeds: [Schema.Types.Mixed],
-	abilityScores: [Schema.Types.Mixed],
+	abilityScores: Schema.Types.Mixed,
 	skills: [Schema.Types.Mixed],
 	vulnerabilities: [String],
 	resistances: [String],

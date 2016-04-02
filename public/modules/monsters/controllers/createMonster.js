@@ -1,6 +1,6 @@
 var CreateMonsterRequest = require('../models/createMonsterRequest');
 
-var MonsterCtrl = function($scope, $rootScope, $http){
+var MonsterCtrl = function($scope, $http){
 	
 	var newMonster = $scope.newMonster = new CreateMonsterRequest();
   	$scope.createMonsterData = newMonster.getData();
