@@ -1,5 +1,5 @@
 <nav class="subnav subnav-tab">
 	<div class="tab-container" ng-repeat="loc in navCtrl.locations">
-		<a ng-href="/app/monsters/{{loc.id}}" class="tab">{{loc.label}}</a>
+		<a ui-sref="{{loc.sref}}" class="tab">{{loc.label}}</a>
 	</div>
 </nav>

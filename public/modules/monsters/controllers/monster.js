@@ -1,31 +1,22 @@
-var CreateMonsterRequest = require('../models/createMonsterRequest');
-
 var MonsterCtrl = function($scope, $rootScope, $http){
 	$rootScope.title = "Monsters";
+	
+	$scope.activeMonster = {
+		name: "Test Monster"
+	};
 
 	$scope.navLocations = [
 		{
-			id: 'index',
-			label: "All Monsters"
-		},
-		{
-			id: 'active',
-			label: "Active Monster"
+			id: 'list',
+			label: "All Monsters",
+			sref: 'app.monsters.list'
 		},
 		{
 			id:'new',
-			label: 'New Monster'
+			label: 'New Monster',
+			sref: 'app.monsters.new'
 		}
-	];
-
-	var newMonster = $scope.newMonster = new CreateMonsterRequest();
-  	$scope.createMonsterData = newMonster.getData();
-
-  	$scope.createMonster = function () {
-  		$http.post('/api/monsters/CreateMonster', $scope.createMonsterData, function(res){
-  			console.log(res);
-  		});
-  	};      
+	]; 
 };
 
 MonsterCtrl.$inject = ['$scope', '$http'];

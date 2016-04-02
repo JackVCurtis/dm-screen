@@ -1,6 +1,6 @@
 var RouteConfig = function($stateProvider, $urlRouterProvider, $locationProvider){
   $locationProvider.html5Mode(true);
-	$urlRouterProvider.otherwise("/app/monsters/");
+	$urlRouterProvider.otherwise("/app/monsters/new");
 
   $stateProvider
     .state('app', {
