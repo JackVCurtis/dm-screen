@@ -5,7 +5,10 @@ var MonsterResource = require('./services/monsterResource.js');
 var MonsterUtils = require('./services/monsterUtils.js');
 
 // Components
-var MonsterForm = require('./components/create-monster/monsterForm.directive.js');
+var MonsterForm = require('./components/monster-form/monsterForm.directive.js');
+var MonsterList = require('./components/monster-list/monsterList.directive.js');
+var MonsterSummary = require('./components/monster-summary/monsterSummary.directive.js');
+
 
 // Controllers
 var MonsterController = require('./controllers/monster.js');
@@ -23,5 +26,7 @@ module.exports = angular.module('monsters')
 					.controller('ListMonstersCtrl', ListMonstersController)
 					.controller('ViewMonsterCtrl', ViewMonsterController)
 					.directive('monsterForm', MonsterForm)
+					.directive('monsterList', MonsterList)
+					.directive('monsterSummary', MonsterSummary)
 					.config(MonsterRoutes)
 					.name;

@@ -1,9 +1,5 @@
 var MonsterCtrl = function($scope, $rootScope, $http){
 	$rootScope.title = "Monsters";
-	
-	$scope.activeMonster = {
-		name: "Test Monster"
-	};
 
 	$scope.navLocations = [
 		{
