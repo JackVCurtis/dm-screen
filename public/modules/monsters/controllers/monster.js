@@ -1,4 +1,4 @@
-var CreateMonsterRequest = require('../models/create-monster-request');
+var CreateMonsterRequest = require('../models/createMonsterRequest');
 
 var MonsterCtrl = function($scope, $rootScope, $http){
 	$rootScope.title = "Monsters";

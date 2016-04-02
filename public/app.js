@@ -27,7 +27,7 @@ var RootCtrl = require('./controllers/root.js');
 var CampaignCtrl = require('./controllers/campaign.js');
 
 // Config
-var RouteConfig = require('./config/app.routes.js');
+var RouteConfig = require('./config/appRoutes.js');
 
 angular.module('app', ['ui.router', monsters, utils]);
 

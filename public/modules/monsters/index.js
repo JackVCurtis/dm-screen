@@ -1,11 +1,11 @@
-var MonsterRoutes = require('./config/monsters.routes.js');
+var MonsterRoutes = require('./config/monsterRoutes.js');
 
 // Services
-var MonsterResource = require('./services/monster-resource.js');
-var MonsterUtils = require('./services/monster-utils.js');
+var MonsterResource = require('./services/monsterResource.js');
+var MonsterUtils = require('./services/monsterUtils.js');
 
 // Components
-var MonsterForm = require('./components/create-monster/monster-form.directive.js');
+var MonsterForm = require('./components/create-monster/monsterForm.directive.js');
 
 // Controllers
 var MonsterController = require('./controllers/monster.js');

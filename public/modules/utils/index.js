@@ -1,12 +1,12 @@
 // Modules
 
 // Services
-var DisplayHelpers = require('./services/display-helpers.service.js');
-var StatusEnumerable = require('./services/status-enumerable.service.js');
+var DisplayHelpers = require('./services/displayHelpers.service.js');
+var StatusEnumerable = require('./services/statusEnumerable.service.js');
 
 // Directives
 var ContentEditable = require('./directives/contenteditable.directive.js');
-var ArrayInput = require('./components/array-input/array-input.directive.js');
+var ArrayInput = require('./components/array-input/arrayInput.directive.js');
 var jvcTabNav = require('./components/jvc-tab-navbar/jvc-tab-navbar.directive.js');
 
 angular.module('utils', []);
