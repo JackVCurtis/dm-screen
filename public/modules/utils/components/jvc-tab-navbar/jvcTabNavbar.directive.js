@@ -1,10 +1,10 @@
-require('./jvc-tab-navbar.scss');
+require('./jvcTabNavbar.scss');
 
 function jvcNavBar() {
 	return {
 		restrict: 'E',
 		scope: {},
-		template: require('./jvc-tab-navbar.html'),
+		template: require('./jvcTabNavbar.html'),
 		controller: function(){
 
 		},

@@ -7,7 +7,7 @@ var StatusEnumerable = require('./services/statusEnumerable.service.js');
 // Directives
 var ContentEditable = require('./directives/contenteditable.directive.js');
 var ArrayInput = require('./components/array-input/arrayInput.directive.js');
-var jvcTabNav = require('./components/jvc-tab-navbar/jvc-tab-navbar.directive.js');
+var jvcTabNav = require('./components/jvc-tab-navbar/jvcTabNavbar.directive.js');
 
 angular.module('utils', []);
 

@@ -3,6 +3,21 @@ var CreateMonsterRequest = require('../models/createMonsterRequest');
 var MonsterCtrl = function($scope, $rootScope, $http){
 	$rootScope.title = "Monsters";
 
+	$scope.navLocations = [
+		{
+			id: 'index',
+			label: "All Monsters"
+		},
+		{
+			id: 'active',
+			label: "Active Monster"
+		},
+		{
+			id:'new',
+			label: 'New Monster'
+		}
+	];
+
 	var newMonster = $scope.newMonster = new CreateMonsterRequest();
   	$scope.createMonsterData = newMonster.getData();
 
