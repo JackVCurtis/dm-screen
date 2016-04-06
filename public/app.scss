@@ -54,14 +54,32 @@ input {
   outline: none;
 }
 
+// Layouts
+
+.flex-equal-box {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 20px;
+
+    div {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        margin: 0 5px;
+    }
+}
+
+
+
 // Lists
 ul {
-  list-style-type: none;
-  padding: 0px;
+    list-style-type: none;
+    padding: 0px;
 }
 
 ul.inline {
-  display: block;
+    display: block;
   
   li {
     display: inline-block;

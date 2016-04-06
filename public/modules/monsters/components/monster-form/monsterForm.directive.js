@@ -6,7 +6,7 @@ function MonsterForm(){
     scope: {},
     template: require('./monsterForm.html'),
     controller: function(){
-      console.log(this);
+
     },
     controllerAs: 'cm',
     bindToController: {

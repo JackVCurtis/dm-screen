@@ -19,7 +19,6 @@ var ArrayInput = function(){
 
             this.submit = function(){
                 var item = this.addItem(this.newItem);
-                console.log(item);
 
                 this.dataArray.push(item);
                 this.refresh();

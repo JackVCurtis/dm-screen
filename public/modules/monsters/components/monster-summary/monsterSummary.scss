@@ -1,0 +1,22 @@
+@import "../../../../palette.scss";
+
+.monster-summary-card {
+	width: 80%;
+  	margin: 20px auto;
+  	border: 1px solid $divider-color;
+ 	border-radius: 5px;
+  	padding: 0px 15px;
+
+    .base-stats {
+		border-bottom: 1px solid black;
+    }
+    .stat {
+    	background-color: $accent-color;
+    	border-radius: 10px;
+    }
+
+    .ability-score {
+    	border: 2px solid $accent-color;
+    	border-radius: 10px;
+    }
+}
