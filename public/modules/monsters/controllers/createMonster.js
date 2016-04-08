@@ -10,7 +10,7 @@ var MonsterCtrl = function($scope, $http, $state, MonsterResource){
   			.then(function(res){
   				console.log(res);
   				$state.go('app.monsters.list');
-  			})
+  			});
   	};      
 };
 

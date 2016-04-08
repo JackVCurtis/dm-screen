@@ -1,18 +1,18 @@
-var ListMonsters = function($scope, $http){
+var ListMonsters = function($scope, $http, MonsterResource){
 
-	$scope.monsters = []
+	$scope.monsters = [];
 
 
 	getMonsters().then(function(res){
-		$scope.monsters = res.data.monsters;
+		$scope.monsters = res.monsters;
 	});
 
 	function getMonsters(){
-		return $http.get('/api/monsters/ListMonsters');
+		return MonsterResource.listMonsters({});
 	}
 
 };
 
-ListMonsters.$inject = ['$scope', '$http'];
+ListMonsters.$inject = ['$scope', '$http', 'MonsterResource'];
 
 module.exports = ListMonsters;
