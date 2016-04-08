@@ -1,17 +1,19 @@
 var CreateMonsterRequest = require('../models/createMonsterRequest');
 
-var MonsterCtrl = function($scope, $http){
+var MonsterCtrl = function($scope, $http, $state, MonsterResource){
 	
 	var newMonster = $scope.newMonster = new CreateMonsterRequest();
   	$scope.createMonsterData = newMonster.getData();
 
   	$scope.createMonster = function () {
-  		$http.post('/api/monsters/CreateMonster', $scope.createMonsterData, function(res){
-  			console.log(res);
-  		});
+  		MonsterResource.createMonster($scope.createMonsterData)
+  			.then(function(res){
+  				console.log(res);
+  				$state.go('app.monsters.list');
+  			})
   	};      
 };
 
-MonsterCtrl.$inject = ['$scope', '$http'];
+MonsterCtrl.$inject = ['$scope', '$http', '$state', 'MonsterResource'];
 
 module.exports = MonsterCtrl;

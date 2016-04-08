@@ -1,3 +1,7 @@
+// Libraries
+var ngResource = require('angular-resource');
+
+// Routes
 var MonsterRoutes = require('./config/monsterRoutes.js');
 
 // Services
@@ -16,7 +20,7 @@ var CreateMonsterController = require('./controllers/createMonster.js');
 var ListMonstersController = require('./controllers/listMonsters.js');
 var ViewMonsterController = require('./controllers/ViewMonster.js');
 
-angular.module('monsters', ['utils']);
+angular.module('monsters', ['utils', ngResource]);
 
 module.exports = angular.module('monsters')
 					.service('MonsterResource', MonsterResource)

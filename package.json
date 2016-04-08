@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-resource": "^1.5.3",
     "angular-ui-router": "^0.2.18",
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",
@@ -20,6 +21,8 @@
     "css-loader": "^0.23.1",
     "express": "^4.13.4",
     "express-jwt": "^3.3.0",
+    "feignjs": "0.0.6",
+    "feignjs-jquery": "0.0.6",
     "html-loader": "^0.4.3",
     "jshint": "^2.9.1",
     "jshint-loader": "^0.8.3",
