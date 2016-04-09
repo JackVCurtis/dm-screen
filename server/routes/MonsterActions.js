@@ -8,5 +8,7 @@ var normalizedPath = path.join(__dirname, "MonsterActions");
 router.use('/monsters/actions', require('./MonsterActions/CreateMonster.js'))
 router.use('/monsters/actions', require('./MonsterActions/GetMonster.js'))
 router.use('/monsters/actions', require('./MonsterActions/ListMonsters.js'))
+router.use('/monsters/actions', require('./MonsterActions/AddAction.js'))
+router.use('/monsters/actions', require('./MonsterActions/UpdateActions.js'))
 
 module.exports = router;

@@ -4,7 +4,7 @@ var router = express.Router();
 var Monster = require('../../models/Monster');
 
 router.get('/GetMonster/:id', function (req, res, next) {
-	Monster.find({_id: req.params.id}, function(err, monster){
+	Monster.findOne({_id: req.params.id}, function(err, monster){
 		if (err){ return next(err); }
 
 	    res.json({monster: monster});		
