@@ -19,7 +19,11 @@ function MonsterResource($resource){
 
 	this.getMonster = function(id){
 		return Monster.get({action: 'GetMonster', id: id}).$promise;
-	}
+	};
+
+	this.addActionToMonster = function(id, actionData){
+		return Monster.get({action: 'AddAction', id: id}, actionData).$promise;
+	};
 }
 
 MonsterResource.$inject = ['$resource'];

@@ -10,7 +10,8 @@ function addAction() {
 		},
 		controllerAs: 'aaCtrl',
 		bindToController: {
-			
+			actionData: '=',
+			onSubmit: '&'
 		}
 	};
 }
