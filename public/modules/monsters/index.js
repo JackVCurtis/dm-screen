@@ -12,7 +12,7 @@ var MonsterUtils = require('./services/monsterUtils.js');
 var MonsterForm = require('./components/monster-form/monsterForm.directive.js');
 var MonsterList = require('./components/monster-list/monsterList.directive.js');
 var MonsterSummary = require('./components/monster-summary/monsterSummary.directive.js');
-
+var AddAction = require('./components/add-action/addAction.directive.js');
 
 // Controllers
 var MonsterController = require('./controllers/Monster.js');
@@ -32,5 +32,6 @@ module.exports = angular.module('monsters')
 					.directive('monsterForm', MonsterForm)
 					.directive('monsterList', MonsterList)
 					.directive('monsterSummary', MonsterSummary)
+					.directive('addAction', AddAction)
 					.config(MonsterRoutes)
 					.name;

@@ -3,7 +3,7 @@ var router = express.Router();
 
 var Monster = require('../../models/Monster');
 
-router.put('/UpdateActions/:id', function (req, res, next) {
+router.post('/UpdateActions/:id', function (req, res, next) {
 	Monster.findOne({_id: req.params.id }, function(err, monster){
 		if (err){ return next(err); }
 
