@@ -1,5 +1,9 @@
 <div class="monster-summary-card">
-	<h4>{{msCtrl.monster.name}}</h4>
+	<h4>
+		<a ui-sref="app.monsters.view({id: msCtrl.monster._id})">
+			{{msCtrl.monster.name}}
+		</a>
+	</h4>
 	<p>{{msCtrl.monster.description}}</p>
 
 	<section class="flex-equal-box base-stats">

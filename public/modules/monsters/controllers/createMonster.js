@@ -8,7 +8,6 @@ var MonsterCtrl = function($scope, $http, $state, MonsterResource){
   	$scope.createMonster = function () {
   		MonsterResource.createMonster($scope.createMonsterData)
   			.then(function(res){
-  				console.log(res);
   				$state.go('app.monsters.list');
   			});
   	};      

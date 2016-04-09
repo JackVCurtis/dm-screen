@@ -15,9 +15,9 @@ var MonsterSummary = require('./components/monster-summary/monsterSummary.direct
 
 
 // Controllers
-var MonsterController = require('./controllers/monster.js');
-var CreateMonsterController = require('./controllers/createMonster.js');
-var ListMonstersController = require('./controllers/listMonsters.js');
+var MonsterController = require('./controllers/Monster.js');
+var CreateMonsterController = require('./controllers/CreateMonster.js');
+var ListMonstersController = require('./controllers/ListMonsters.js');
 var ViewMonsterController = require('./controllers/ViewMonster.js');
 
 angular.module('monsters', ['utils', ngResource]);
